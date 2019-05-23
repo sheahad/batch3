@@ -12,6 +12,9 @@ namespace MyWinApp
 {
     public partial class ArrayForm : Form
     {
+        int index = 0;
+        const int size = 10;
+        int[] firstNumber = new int[size];
         public ArrayForm()
         {
             InitializeComponent();
@@ -42,6 +45,43 @@ namespace MyWinApp
 
             showRichTextBox.Text = message;
 
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {   
+
+            firstNumber[index] = Convert.ToInt32(numberTextBox.Text);
+            index++;
+
+            string message = "";
+
+            for (int index = 0; index < firstNumber.Length; index++)
+            {
+                if (firstNumber[index] != 0)
+                    message = message + "Value at Index " + index + " is: " + firstNumber[index].ToString() + "\n";
+            }
+
+            showRichTextBox.Text = message;
+        }
+
+        private void ReverseButton_Click(object sender, EventArgs e)
+        {
+            string message = "Input Values\n";
+
+            for (int index = 0; index < firstNumber.Length; index++)
+            {
+                if (firstNumber[index] != 0)
+                    message = message + "Value at Index " + index + " is: " + firstNumber[index].ToString() + "\n";
+            }
+
+            message = message+ "Reverse Value: \n";
+            for (int index = (firstNumber.Length-1); index >=0 ; index--)
+            {
+                if (firstNumber[index] != 0)
+                    message = message + "Value at Index " + index + " is: " + firstNumber[index].ToString() + "\n";
+            }
+
+            showRichTextBox.Text =  message;
         }
     }
 }
