@@ -15,22 +15,33 @@ namespace MyWinApp
         public ArrayForm()
         {
             InitializeComponent();
+        }
 
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
             const int size = 10;
-            int [] firstArray = new int[size];
-            firstArray[0] =10;
-            firstArray[1] = 1;
-            firstArray[5] = 9;
+            int[] firstNumber = new int[size];
+
+            //int[] secondNumber = new [] {3,2,6};
+
+            firstNumber[0] = 1;
+            firstNumber[3] = 3;
+            firstNumber[9] = 8;
 
             string message = "";
 
-            for (int index = 0; index < firstArray.Length; index ++)
+            for (int index = 0; index < firstNumber.Length; index++)
             {
-                if(firstArray[index]!= 0)
-                    message = message + "Element at [index : " + index +"] is = "+ firstArray[index] + "\n";
+                if (firstNumber[index] != 0)
+                    message = message + "Value at Index " + index + " is: " + firstNumber[index].ToString() + "\n";
             }
 
+            //message = message + "Value at Index 0 is: "+ number[0].ToString()+"\n";
+            //message = message + "Value at Index 3 is: " + number[3].ToString() + "\n";
+            //message = message + "Value at Index 9 is: " + number[9].ToString() + "\n";
+
             showRichTextBox.Text = message;
+
         }
     }
 }

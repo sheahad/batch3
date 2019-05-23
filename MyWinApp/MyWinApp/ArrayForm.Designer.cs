@@ -29,21 +29,33 @@
         private void InitializeComponent()
         {
             this.showRichTextBox = new System.Windows.Forms.RichTextBox();
+            this.ShowButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // showRichTextBox
             // 
-            this.showRichTextBox.Location = new System.Drawing.Point(12, 47);
+            this.showRichTextBox.Location = new System.Drawing.Point(22, 39);
             this.showRichTextBox.Name = "showRichTextBox";
-            this.showRichTextBox.Size = new System.Drawing.Size(470, 272);
+            this.showRichTextBox.Size = new System.Drawing.Size(422, 246);
             this.showRichTextBox.TabIndex = 0;
             this.showRichTextBox.Text = "";
+            // 
+            // ShowButton
+            // 
+            this.ShowButton.Location = new System.Drawing.Point(369, 12);
+            this.ShowButton.Name = "ShowButton";
+            this.ShowButton.Size = new System.Drawing.Size(75, 23);
+            this.ShowButton.TabIndex = 1;
+            this.ShowButton.Text = "Show";
+            this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
             // ArrayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 331);
+            this.ClientSize = new System.Drawing.Size(456, 297);
+            this.Controls.Add(this.ShowButton);
             this.Controls.Add(this.showRichTextBox);
             this.Name = "ArrayForm";
             this.Text = "ArrayForm";
@@ -54,5 +66,6 @@
         #endregion
 
         private System.Windows.Forms.RichTextBox showRichTextBox;
+        private System.Windows.Forms.Button ShowButton;
     }
 }
