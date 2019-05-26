@@ -53,26 +53,19 @@ namespace MyWinApp
             firstNumber[index] = Convert.ToInt32(numberTextBox.Text);
             index++;
 
-            string message = "";
+            string  message ="";
 
-            for (int i = 0; i < firstNumber.Length; i++)
-            {
-                if (firstNumber[i] != 0)
-                    message = message + "Value at Index " + i + " is: " + firstNumber[i].ToString() + "\n";
-            }
+            message = Show("Add");
 
             showRichTextBox.Text = message;
+            
         }
 
         private void ReverseButton_Click(object sender, EventArgs e)
         {
             string message = "Input Values\n";
 
-            for (int index = 0; index < firstNumber.Length; index++)
-            {
-                if (firstNumber[index] != 0)
-                    message = message + "Value at Index " + index + " is: " + firstNumber[index].ToString() + "\n";
-            }
+            message = message + Show("Reverse");
 
             message = message+ "Reverse Value: \n";
             for (int index = (firstNumber.Length-1); index >=0 ; index--)
@@ -93,6 +86,19 @@ namespace MyWinApp
             }
 
             showRichTextBox.Text = "Sum: " + sum;
+        }
+
+        string Show(string name)
+        {
+            string message = "";
+
+            for (int i = 0; i < firstNumber.Length; i++)
+            {
+                if (firstNumber[i] != 0)
+                    message = message + "Value at Index " + i + " is: " + firstNumber[i].ToString() + "\n";
+            }
+
+            return name + ":" + message;
         }
     }
 }

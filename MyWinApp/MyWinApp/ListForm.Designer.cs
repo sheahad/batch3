@@ -28,94 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.showButton = new System.Windows.Forms.Button();
-            this.showRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.numberTextBox = new System.Windows.Forms.TextBox();
+            this.ShowRichTextBox = new System.Windows.Forms.RichTextBox();
             this.AddButton = new System.Windows.Forms.Button();
-            this.ReverseButton = new System.Windows.Forms.Button();
-            this.CopyButton = new System.Windows.Forms.Button();
-            this.DuplicateButton = new System.Windows.Forms.Button();
+            this.NumberTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // showButton
+            // ShowRichTextBox
             // 
-            this.showButton.Location = new System.Drawing.Point(326, 68);
-            this.showButton.Name = "showButton";
-            this.showButton.Size = new System.Drawing.Size(75, 23);
-            this.showButton.TabIndex = 0;
-            this.showButton.Text = "Show";
-            this.showButton.UseVisualStyleBackColor = true;
-            this.showButton.Click += new System.EventHandler(this.showButton_Click);
-            // 
-            // showRichTextBox
-            // 
-            this.showRichTextBox.Location = new System.Drawing.Point(32, 68);
-            this.showRichTextBox.Name = "showRichTextBox";
-            this.showRichTextBox.Size = new System.Drawing.Size(288, 242);
-            this.showRichTextBox.TabIndex = 1;
-            this.showRichTextBox.Text = "";
-            // 
-            // numberTextBox
-            // 
-            this.numberTextBox.Location = new System.Drawing.Point(88, 42);
-            this.numberTextBox.Name = "numberTextBox";
-            this.numberTextBox.Size = new System.Drawing.Size(151, 20);
-            this.numberTextBox.TabIndex = 2;
+            this.ShowRichTextBox.Location = new System.Drawing.Point(12, 101);
+            this.ShowRichTextBox.Name = "ShowRichTextBox";
+            this.ShowRichTextBox.Size = new System.Drawing.Size(222, 321);
+            this.ShowRichTextBox.TabIndex = 0;
+            this.ShowRichTextBox.Text = "";
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(245, 42);
+            this.AddButton.Location = new System.Drawing.Point(159, 72);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 23);
-            this.AddButton.TabIndex = 3;
+            this.AddButton.TabIndex = 1;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // ReverseButton
+            // NumberTextBox
             // 
-            this.ReverseButton.Location = new System.Drawing.Point(326, 97);
-            this.ReverseButton.Name = "ReverseButton";
-            this.ReverseButton.Size = new System.Drawing.Size(75, 23);
-            this.ReverseButton.TabIndex = 4;
-            this.ReverseButton.Text = "Reverse";
-            this.ReverseButton.UseVisualStyleBackColor = true;
-            this.ReverseButton.Click += new System.EventHandler(this.ReverseButton_Click);
-            // 
-            // CopyButton
-            // 
-            this.CopyButton.Location = new System.Drawing.Point(327, 127);
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(75, 23);
-            this.CopyButton.TabIndex = 5;
-            this.CopyButton.Text = "Copy";
-            this.CopyButton.UseVisualStyleBackColor = true;
-            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
-            // 
-            // DuplicateButton
-            // 
-            this.DuplicateButton.Location = new System.Drawing.Point(327, 157);
-            this.DuplicateButton.Name = "DuplicateButton";
-            this.DuplicateButton.Size = new System.Drawing.Size(75, 23);
-            this.DuplicateButton.TabIndex = 6;
-            this.DuplicateButton.Text = "Duplicate";
-            this.DuplicateButton.UseVisualStyleBackColor = true;
-            this.DuplicateButton.Click += new System.EventHandler(this.DuplicateButton_Click);
+            this.NumberTextBox.Location = new System.Drawing.Point(36, 74);
+            this.NumberTextBox.Name = "NumberTextBox";
+            this.NumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NumberTextBox.TabIndex = 2;
             // 
             // ListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 322);
-            this.Controls.Add(this.DuplicateButton);
-            this.Controls.Add(this.CopyButton);
-            this.Controls.Add(this.ReverseButton);
+            this.ClientSize = new System.Drawing.Size(421, 450);
+            this.Controls.Add(this.NumberTextBox);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.numberTextBox);
-            this.Controls.Add(this.showRichTextBox);
-            this.Controls.Add(this.showButton);
+            this.Controls.Add(this.ShowRichTextBox);
             this.Name = "ListForm";
-            this.Text = "ListForm";
+            this.Text = "List";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,12 +75,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button showButton;
-        private System.Windows.Forms.RichTextBox showRichTextBox;
-        private System.Windows.Forms.TextBox numberTextBox;
+        private System.Windows.Forms.RichTextBox ShowRichTextBox;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button ReverseButton;
-        private System.Windows.Forms.Button CopyButton;
-        private System.Windows.Forms.Button DuplicateButton;
+        private System.Windows.Forms.TextBox NumberTextBox;
     }
 }

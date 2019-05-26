@@ -20,6 +20,7 @@ namespace MyWinApp
             //Application.Run(new DataTypeForm());
             //Application.Run(new ArrayForm());
             Application.Run(new ListForm());
+            
         }
     }
 }
