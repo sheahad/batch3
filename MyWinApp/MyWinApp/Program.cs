@@ -18,8 +18,8 @@ namespace MyWinApp
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new HomeForm());
             //Application.Run(new DataTypeForm());
-            Application.Run(new ArrayForm());
-
+            //Application.Run(new ArrayForm());
+            Application.Run(new ListForm());
         }
     }
 }

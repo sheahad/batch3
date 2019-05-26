@@ -55,10 +55,10 @@ namespace MyWinApp
 
             string message = "";
 
-            for (int index = 0; index < firstNumber.Length; index++)
+            for (int i = 0; i < firstNumber.Length; i++)
             {
-                if (firstNumber[index] != 0)
-                    message = message + "Value at Index " + index + " is: " + firstNumber[index].ToString() + "\n";
+                if (firstNumber[i] != 0)
+                    message = message + "Value at Index " + i + " is: " + firstNumber[i].ToString() + "\n";
             }
 
             showRichTextBox.Text = message;
@@ -82,6 +82,17 @@ namespace MyWinApp
             }
 
             showRichTextBox.Text =  message;
+        }
+
+        private void SumButton_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            for (int index = 0; index < size; index++)
+            {
+                sum = sum + firstNumber[index];
+            }
+
+            showRichTextBox.Text = "Sum: " + sum;
         }
     }
 }
