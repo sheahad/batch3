@@ -20,7 +20,12 @@ namespace MyWinApp
             //Application.Run(new DataTypeForm());
             //Application.Run(new ArrayForm());
             //Application.Run(new ListForm());
-            Application.Run(new ValidationForm());
+
+            //Application.Run(new ValidationForm());
+
+            Application.Run(new FeaturesForm());
+            
+
         }
     }
 }
