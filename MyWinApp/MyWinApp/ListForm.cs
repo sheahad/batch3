@@ -83,7 +83,7 @@ namespace MyWinApp
                     if (num==cnum && flag == false)
                     {
                         duplicateNumbers.Add(num);
-                        flag = true;
+                        flag =   true;
                     }
                 }
                 flag = false;
