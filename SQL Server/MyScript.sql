@@ -4,9 +4,11 @@ USE StudentDB
 --DROP DATABASE StudentDB
 
 CREATE TABLE Districts(
-ID int IDENTITY (1,1),
+ID int IDENTITY (1,1) ,
 Name VARCHAR(50)
 )
+
+--DROP TABLE Districts
 
 INSERT INTO Districts Values ('Dhaka')
 INSERT INTO Districts Values ('Chitagong')
@@ -29,6 +31,8 @@ INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('CSE003', 
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE001', 'Araf', 21, 'Uttora',1)
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE002', 'Ali', 21, 'Motijhil',2)
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'Snigdha', 21, 'Uttora',1)
+
+INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'Snigdha Shaha', 20, 'Uttora',3)
 
 SELECT * FROM Students
 
@@ -101,8 +105,28 @@ SELECT * FROM MArks
 
 
 SELECT RollNo, s.Name, Age, Address, DistrictID,  d.Name as District  FROM Students  AS s
-LEFT OUTER JOIN Districts AS d ON d.ID = s.DistrictID
+LEFT JOIN Districts AS d ON d.ID = s.DistrictID
 
 
 SELECT * FROM Students
 SELECT ID, Name  FROM Districts
+
+CREATE TABLE Departments
+(
+Id INT IDENTITY (1,1),
+Name VARCHAR(10)
+)
+
+
+SELECT * FROM Departments
+
+INSERT INTO Departments (Name) VALUES ('CSE') 
+INSERT INTO Departments (Name) VALUES ('CSE') 
+
+UPDATE Departments 
+SET Name = 'EEE'
+WHERE Id = 1
+
+DELETE FROM Departments 
+WHERE Id = 3
+
