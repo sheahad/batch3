@@ -49,14 +49,27 @@ WHERE ID = 30
 
 
 CREATE TABLE Departments(
-ID int IDENTITY (1,1),
-Name VARCHAR(50)
+ID int IDENTITY (1,1) Primary Key,
+Name VARCHAR(50),
+Code VARCHAR(50)
 )
 
-INSERT INTO Departments Values ('CSE')
-INSERT INTO Departments Values ('EEE')
+INSERT INTO Departments Values ( 'Computer Science & Engineering','CSE')
+INSERT INTO Departments Values ('Elecrical & Electronics Engineering','EEE')
+
+INSERT INTO Departments (Name, Code) VALUES ( 'Computer Science & Engineering','CSE')
 
 SELECT * FROM Departments
+
+UPDATE Departments 
+SET Name = '', Code = ''
+WHERE ID = 9
+
+
+DELETE FROM Departments
+
+DROP TABLE  Departments
+
 
 CREATE TABLE Subjects(
 ID int IDENTITY (1,1),

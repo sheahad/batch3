@@ -23,7 +23,8 @@ namespace MyWinApp
 
             //Application.Run(new ValidationForm());
 
-            Application.Run(new FeaturesForm());
+            //Application.Run(new FeaturesForm());
+            Application.Run(new DepartmentUi());
             
 
         }
