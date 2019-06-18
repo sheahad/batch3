@@ -19,13 +19,14 @@ WHERE ID = 2
 SELECT * FROM Districts
 
 CREATE TABLE Students(
-ID int IDENTITY (1,1),
+ID int IDENTITY (1,1) PRIMARY KEY,
 RollNo VARCHAR(10),
 Name VARCHAR(100),
 Age int,
 Address VARCHAR(MAX),
 DistrictID int FOREIGN KEY REFERENCES Districts(ID)
 )
+
 --DROP TABLE Students
 
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('CSE001', 'Ali', 21, 'Mirpur',1)
@@ -39,6 +40,13 @@ INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 
 INSERT INTO Students (RollNo, Name, Age, Address, DistrictID) VALUES ('EEE003', 'Abrar', 20, 'Uttora',4)
 
 SELECT * FROM Students
+
+CREATE VIEW StudentsView
+AS
+SELECT s.ID, RollNo, s.Name AS Student, Age, Address, DistrictID, d.Name AS District FROM Students AS s
+LEFT JOIN Districts AS d ON d.ID = s.DistrictID
+
+SELECT * FROM StudentsView
 
 UPDATE Students 
 SET ID = 2
