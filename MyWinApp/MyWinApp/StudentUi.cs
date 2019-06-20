@@ -66,9 +66,7 @@ namespace MyWinApp
             student.Age = Convert.ToInt32(ageTextBox.Text);
             student.Address = addressTextBox.Text;
             student.DistrictID = Convert.ToInt32(districtComboBox.SelectedValue);
-
-
-
+            
             Insert(student);
 
         }
