@@ -13,7 +13,7 @@ namespace MyWinApp.Repository
     public class StudentRepository
     {
         //Connection
-        private string connectionString = @"Server=BITM-TRAINER-30\SQLEXPRESS; Database=StudentDB; Integrated Security=True";
+        private string connectionString = @"Server=.; Database=StudentDB; Integrated Security=True";
         private SqlConnection sqlConnection;
 
         //Command
